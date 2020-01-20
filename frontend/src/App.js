@@ -7,7 +7,8 @@ import logo from './assets/logo.jpeg'
 function App() {
   return (
     <div className="container">
-      <img src={logo} alt="theScore"/>
+      <img src={logo} alt="theScore" width="75"/>
+      <span className="title">theScore - The Rush</span>
 
       <div className="content">
         <TableData />

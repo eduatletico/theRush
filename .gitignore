@@ -3,6 +3,9 @@
 */.pnp
 */.pnp.js
 
+backend/temp/*
+!backend/temp/.gitkeep
+
 # misc
 */.DS_Store
 */.env.local

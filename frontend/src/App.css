@@ -12,13 +12,22 @@ html, body, #root {
 }
 
 body {
-  background: #000;
+  background: #121b27;
   -webkit-font-smoothing: antialiased !important;
 }
 
 body, input, button {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 14px;
+}
+
+.title {
+  color: #fff;
+  font-size: 48pt;
+  font-style: italic;
+  font-weight: bold;
+  vertical-align: top;
+  padding-left: 20px;
 }
 
 #rushing {
@@ -42,26 +51,61 @@ body, input, button {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #4CAF50;
+  background-color: #062754;
   color: white;
 }
 
 .search-players-bar {
-  width: 25%;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 5;
   display: flex;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
-}
-.search-players-input-wrapper {
-  flex: 1;
-  background: #e9e;
+  justify-content: flex-end;
 }
 .search-players-bar input {
-  width: 100%;
+  width: 60%;
   padding: 15px 10px;
   font-size: 1.25em;
   border: none;
   outline: none;
+}
+.search-players-bar select {
+  width: 60%;
+  padding: 15px 10px;
+  font-size: 1.25em;
+  border: none;
+  outline: none;
+  background: #fff;
+}
+.search-players-input-wrapper {
+  flex: 1;
+}
+.sort-players-select-wrapper {
+  flex: 1;
+  align-self: flex-end;
+  text-align: center;
+}
+.download-csv-wrapper {
+  flex: 1;
+  align-self: flex-end;
+  color: #fff;
+  text-align: right;
+}
+.download-csv-wrapper button.btn {
+  border: 2;
+  border-radius: 2px;
+  width: 60%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  border-color: #0078fd;
+  color: #ffffff;
+  cursor: pointer;
+}
+.download-csv-wrapper button.btn:hover {
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+  background: #0078fd;
 }
