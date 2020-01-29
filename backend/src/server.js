@@ -71,6 +71,33 @@ app.get('/download', (req, res) => {
     return res.json({ error: 'Empty rushing table' })
   }
 })
+app.get('/aggregate', (req, res) => {
+  const { filter } = req.body
 
+  var filtered = {}
+  var ret = []
+  rushing.map((rush, indx) => {
+    let yds = rush["Yds"] + ""
+    let tds = rush["TD"] + ""
+    let actualYds = filtered[rush.Team] ? filtered[rush.Team]["Yds"] : 0
+    let actualTD = filtered[rush.Team] ? filtered[rush.Team]["TD"] : 0
+    filtered[rush.Team] = {
+      "Yds": actualYds + parseInt(yds.replace(",", "")),
+      "TD": actualTD + parseInt(tds.replace(",", ""))
+    }
+  })
+
+  for (let i in filtered) {
+    ret.push({
+      "Team": i,
+      "Yds": filtered[i]["Yds"],
+      "TD": filtered[i]["TD"]
+    })
+  }
+
+  ret.sort((p1, p2) => parseInt(p2.Yds) - parseInt(p1.Yds));
+
+  return res.json(ret)
+})
 
 app.listen(3333)

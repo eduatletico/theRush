@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import TableData from './TableData'
+
+import Routes from './Routes'
 
 import logo from './assets/logo.jpeg'
 
@@ -11,7 +12,7 @@ function App() {
       <span className="title">theScore - The Rush</span>
 
       <div className="content">
-        <TableData />
+        <Routes />
       </div>
     </div>
   );

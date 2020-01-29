@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { DebounceInput } from 'react-debounce-input'
-import api from './services/api'
+import { Link } from 'react-router-dom'
+import api from '../services/api'
 
 export default function TableData() {
   const [filterName, setFilterName] = useState('')
@@ -111,6 +112,9 @@ export default function TableData() {
           <button className="btn" onClick={handleDownloadButton}>Download CSV</button>
         </div>
       </div>
+      <Link to="/aggregate">
+        <button className="btn">View Aggregates</button>
+      </Link>
       <table id='rushing'>
         <tbody>
           <tr>{tableHeader}</tr>

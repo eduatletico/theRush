@@ -92,20 +92,27 @@ body, input, button {
   color: #fff;
   text-align: right;
 }
-.download-csv-wrapper button.btn {
+button.btn {
   border: 2;
   border-radius: 2px;
-  width: 60%;
-  height: 45px;
+  width: 150px;
+  height: 35px;
   padding: 0 20px;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   background: transparent;
   border-color: #0078fd;
   color: #ffffff;
   cursor: pointer;
+  margin-bottom: 3px;
 }
-.download-csv-wrapper button.btn:hover {
+button.btn:hover {
   transition: background-color .15s ease, border-color .15s ease, color .15s ease;
   background: #0078fd;
+}
+.download-csv-wrapper button.btn {
+  width: 60%;
+  height: 45px;
+  font-size: 16px;
+  margin-bottom: 0;
 }
